@@ -1,0 +1,156 @@
+@import "../../css-config/mixins.scss";
+.single-product-main-content{
+    margin: 20px 0;
+    @include md{
+        margin: 75px 0;
+    }
+    .layout{
+        max-width: calc(100% - 20px);
+        margin:0 auto;
+        @include md{
+            max-width: 1200px;
+            margin: 75px 0;
+        }
+    }
+    .single-product-page{
+        display:flex;
+        flex-direction: column;
+        @include md{
+            flex-direction: row;
+        }
+        .left{
+            
+            width:100%;
+            background-color:white;
+            flex-shrink: 0;
+            @include md{
+                padding-left:20px;
+                width: 800px;
+                height: 1000px;
+            }
+            img{
+                
+                width:100%;
+                display: block;
+                height: 1000px;
+            }
+        }
+        .right{
+            display:flex;
+            flex-direction: column;
+            padding-top: 20px;
+            @include md{
+                padding:0 35px;
+            }
+            .name{
+                color:#330649;
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 20px;
+                @include md{
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+            .price{
+                color:#330649;
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 20px;
+            }
+            .d{
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                color:#7c4496;
+                @include md{
+                    font-size: 16px;
+                    line-height: 24px;
+                    
+                }
+            }
+            .cart-buttons{
+                display: flex;
+                @include md{
+                    margin-top: 10px;
+                }
+                .qbuttons{
+                    padding-right: 5px;
+                    padding-left:5px;
+                    width:fit-content;
+                    display: flex;
+                    border:2px solid #330649;
+                    margin-right: 10px;
+                    height: 30px;
+                    span{
+                        
+                        font-size: 24px;
+                        display: flex;
+                        width:20px;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        color:#330649 ;
+                        
+                        &:nth-child(1){
+                            border-right: 2px solid #330649;
+                        }
+                        
+                        &:nth-child(3){
+                            border-left: 2px solid #330649;
+                        }
+                    }
+                }
+                .atcbutton{
+                    outline: 0;
+                    border: 0;
+                    height: 30px;
+                    width: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 16px;
+                    color: white;
+                    background-color: #be98d4;
+                    
+                    @include md{
+                        flex-grow: unset;
+                    }
+                
+
+                }
+            }
+            .divider{
+                margin: 20px 0;
+                height: 1px;
+                width: 100%;
+                background-color:white ;
+            }
+            .info{
+                .text-bold{
+                    color:#330649;
+                    font-size: 18px;
+                    font-weight: 500;
+                    display: block;
+                    &:nth-child(1){
+                        margin-bottom: 20px;
+                    }
+                    
+                    span{
+                        padding:5px;
+                        font-size: 16px;
+                        font-weight: 400; 
+                        cursor: pointer;
+                        color: #7d5296;
+                    }
+                    svg{
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
